@@ -3,44 +3,41 @@
 const topMenuMap = [
     {key:'index',name:'首页'},
     {key:'user',name:'人才'},
-    {key:'enterprise',name:'企业'},
-    {key:'school',name:'高校'},
-    {key:'content',name:'内容'},
     {key:'sys',name:'系统'},
-    {key:'tool',name:'工具'},
+    {key:'tool',name:'页面模板'},
 ];
 //子菜单
 const slider = {
     index: [
         {
             icon: 'el-icon-lx-home',
-            index: 'dashboard',
+            path: 'dashboard', //固定值其他页面有判断不能关闭此路由
             title: '管理中心面板'
         }
     ],
     user: [
         {
             icon: 'el-icon-lx-cascades',
-            index: 'table',
+            path: 'tpl/table',
             title: '基础表格'
         }
     ],
     sys: [
         {
             icon: 'el-icon-lx-calendar',
-            index: 'sys-1',
+            path: '#',
             title: '分类管理',
             subs: [
                 {
-                    index: 'form',
+                    path: 'tpl/form',
                     title: '地区分类'
                 },
                 {
-                    index: 'form',
+                    path: 'tpl/form',
                     title: '职位分类'
                 },
                 {
-                    index: 'form',
+                    path: 'tpl/form',
                     title: '其他分类组'
                 }
             ]
@@ -49,92 +46,91 @@ const slider = {
     tool:[
         {
             icon: 'el-icon-lx-cascades',
-            index: 'table',
+            path: 'tpl/table',
             title: '基础表格'
         },
         {
             icon: 'el-icon-lx-copy',
-            index: 'tabs',
+            path: 'tpl/tabs',
             title: 'tab选项卡'
         },
         {
             icon: 'el-icon-lx-calendar',
-            index: '3',
+            path: '#',
             title: '表单相关',
             subs: [
                 {
-                    index: 'form',
+                    path: 'tpl/form',
                     title: '基本表单'
                 },
                 {
-                    index: '3-2',
+                    path: '#',
                     title: '三级菜单',
                     subs: [
                         {
-                            index: 'editor',
+                            path: 'tpl/editor',
                             title: '富文本编辑器'
                         },
                         {
-                            index: 'markdown',
+                            path: 'tpl/markdown',
                             title: 'markdown编辑器'
                         },
                     ]
                 },
                 {
-                    index: 'upload',
+                    path: 'tpl/upload',
                     title: '文件上传'
                 }
             ]
         },
         {
             icon: 'el-icon-lx-emoji',
-            index: 'icon',
+            path: 'tpl/icon',
             title: '自定义图标'
         },
         {
             icon: 'el-icon-pie-chart',
-            index: 'charts',
+            path: 'tpl/charts',
             title: 'schart图表'
         },
         {
             icon: 'el-icon-rank',
-            index: '6',
+            path: '#',
             title: '拖拽组件',
             subs: [
                 {
-                    index: 'drag',
+                    path: 'tpl/drag',
                     title: '拖拽列表',
                 },
                 {
-                    index: 'dialog',
+                    path: 'tpl/dialog',
                     title: '拖拽弹框',
                 }
             ]
         },
         {
             icon: 'el-icon-lx-global',
-            index: 'i18n',
+            path: 'tpl/i18n',
             title: '国际化功能'
         },
         {
             icon: 'el-icon-lx-warn',
-            index: '7',
+            path: '#',
             title: '错误处理',
             subs: [
                 {
-                    index: 'permission',
+                    path: 'tpl/permission',
                     title: '权限测试'
                 },
                 {
-                    index: '404',
+                    path: 'tpl/404',
                     title: '404页面'
                 }
             ]
-        }
-        ,
+        },
         {
             icon: 'el-icon-lx-redpacket_fill',
-            index: '/donate',
+            path: 'tpl/donate',
             title: '支持作者'
         }
     ]

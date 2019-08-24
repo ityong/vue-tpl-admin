@@ -1,31 +1,37 @@
 <template>
     <div class="sidebar">
-        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
-            text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
-            <template v-for="item in items">
-                <template v-if="item.subs">
-                    <el-submenu :index="item.index" :key="item.index">
-                        <template slot="title">
-                            <i :class="item.icon"></i><span slot="title">{{ item.title }}</span>
-                        </template>
-                        <template v-for="subItem in item.subs">
-                            <el-submenu v-if="subItem.subs" :index="subItem.index" :key="subItem.index">
-                                <template slot="title">{{ subItem.title }}</template>
-                                <el-menu-item v-for="(threeItem,i) in subItem.subs" :key="i" :index="threeItem.index">
-                                    {{ threeItem.title }}
-                                </el-menu-item>
-                            </el-submenu>
-                            <el-menu-item v-else :index="subItem.index" :key="subItem.index">
-                                {{ subItem.title }}
-                            </el-menu-item>
-                        </template>
-                    </el-submenu>
-                </template>
-                <template v-else>
-                    <el-menu-item :index="item.index" :key="item.index">
-                        <i :class="item.icon"></i><span slot="title">{{ item.title }}</span>
-                    </el-menu-item>
-                </template>
+        <el-menu
+                class="sidebar-el-menu"
+                :default-active="nowShowRouteIndex"
+                :collapse="collapse"
+                text-color="#bfcbd9"
+                background-color="#324157"
+                active-text-color="#20a0ff"
+        >
+            <template v-for="(item,i) in items">
+                <el-menu-item v-if="!item.subs" :index="`${i}`" @click="pathUrl(item.path,`${i}`)">
+                    <i :class="item.icon"></i>
+                    <span slot="title">{{item.title}}</span>
+                </el-menu-item>
+                <el-submenu v-else :index="`${i}`">
+                    <template slot="title">
+                        <i :class="item.icon"></i>
+                        <span slot="title">{{item.title}}</span>
+                    </template>
+                    <template v-for="(item2,j) in item.subs">
+                        <el-menu-item-group  v-if="!item2.subs">
+                            <el-menu-item :index="`${i}-${j}`" @click="pathUrl(item2.path,`${i}-${j}`)">{{item2.title}}</el-menu-item>
+                        </el-menu-item-group>
+
+                        <el-submenu v-else :index="`${i}-${j}`">
+                            <span slot="title">{{item2.title}}</span>
+                            <el-menu-item v-for="(item3,k) in item2.subs"
+                                          @click="pathUrl(item3.path,`${i}-${j}-${k}`)"
+                                          :index="`${i}-${j}-${k}`"
+                            >{{item3.title}}</el-menu-item>
+                        </el-submenu>
+                    </template>
+                </el-submenu>
             </template>
         </el-menu>
     </div>
@@ -37,20 +43,26 @@
         data() {
             return {
                 collapse: false,
-                topMenuKey: '',
-                items: slider['index']
+                topMenuKey: 'index',
+                items: slider['index'],
+                nowShowRouteIndex: 'no',
             }
         },
-        computed:{
-            onRoutes(){
-                return this.$route.path.replace('/','');
-            }
+        methods: {
+            pathUrl(path,index) {
+                if (this.nowShowRouteIndex !== index && this.$router.currentRoute.fullPath != `/${path}`) {
+                    this.nowShowRouteIndex = index
+                    this.$router.push(`/${path}`)
+                }
+            },
         },
         created(){
             //监听顶部菜单变化
             this.$root.$on('topMenuChange', msg => {
+                window.console.log(msg)
+
+
                 this.topMenuKey = msg;
-                window.console.log('on---',msg)
                 this.items = slider[msg] || []
             })
             // 通过 Event进行组件间通信，来折叠侧边栏

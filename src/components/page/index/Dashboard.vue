@@ -10,21 +10,21 @@
                             <div>{{role}}</div>
                         </div>
                     </div>
-                    <div class="user-info-list">上次登录时间：<span>2018-01-01</span></div>
-                    <div class="user-info-list">上次登录地点：<span>东莞</span></div>
+                    <div class="user-info-list">上次登录时间：<span>2019-01-01</span></div>
+                    <div class="user-info-list">上次登录地点：<span>中国.上海</span></div>
                 </el-card>
                 <el-card shadow="hover" style="height:252px;">
                     <div slot="header" class="clearfix">
-                        <span>语言详情</span>
+                        <span>项目地址</span>
+                        <a href="http://vadmintpl.ityong.cn" target="_blank"><el-tag>在线演示</el-tag></a> &nbsp;&nbsp;
+                        <a href="https://github.com/ityong/vue-tpl-admin.git" target="_blank"><el-tag type="warning">github</el-tag></a>&nbsp;&nbsp;
+                        <a href="https://gitee.com/ityong/vue-tpl-admin.git" target="_blank"> <el-tag type="danger">gitee</el-tag></a>&nbsp;&nbsp;
                     </div>
-                    Vue
-                    <el-progress :percentage="71.3" color="#42b983"></el-progress>
-                    JavaScript
-                    <el-progress :percentage="24.1" color="#f1e05a"></el-progress>
-                    CSS
-                    <el-progress :percentage="3.7"></el-progress>
-                    HTML
-                    <el-progress :percentage="0.9" color="#f56c6c"></el-progress>
+                    如果该框架对你有帮助，那就请作者喝杯饮料吧！
+                    <div>
+                        <img class="sang-img" src="../../../assets/img/sangwx.jpg">
+                        <img class="sang-img" src="../../../assets/img/sangzfb.png">
+                    </div>
                 </el-card>
             </el-col>
             <el-col :span="16">
@@ -136,31 +136,31 @@
                     }
                 ],
                 data: [{
-                        name: '2018/09/04',
+                        name: '2019/09/04',
                         value: 1083
                     },
                     {
-                        name: '2018/09/05',
+                        name: '2019/09/05',
                         value: 941
                     },
                     {
-                        name: '2018/09/06',
+                        name: '2019/09/06',
                         value: 1139
                     },
                     {
-                        name: '2018/09/07',
+                        name: '2019/09/07',
                         value: 816
                     },
                     {
-                        name: '2018/09/08',
+                        name: '2019/09/08',
                         value: 327
                     },
                     {
-                        name: '2018/09/09',
+                        name: '2019/09/09',
                         value: 228
                     },
                     {
-                        name: '2018/09/10',
+                        name: '2019/09/10',
                         value: 1065
                     }
                 ],
@@ -230,6 +230,9 @@
 
 
 <style scoped>
+    .sang-img {
+        height: 120px; margin-left: 30px;margin-top: 10px;
+    }
     .el-row {
         margin-bottom: 20px;
     }

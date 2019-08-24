@@ -5,11 +5,11 @@
             <i v-if="!collapse" class="el-icon-s-fold"></i>
             <i v-else class="el-icon-s-unfold"></i>
         </div>
-        <div class="logo">后台管理系统</div>
+        <div class="logo">vAdminTpl</div>
         <div class="top-menu">
             <div v-for="(item,index) in topMenuMap" :key="index"
                  :class="['menu-nav',item.key == topMenuKey ? 'menu-active' : '']"
-                 @click="topMenuChage(item.key)"
+                 @click="topMenuChange(item.key)"
             >{{item.name}}</div>
         </div>
         <div class="header-right">
@@ -44,11 +44,12 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <a href="http://www.styleyong.com" target="_blank">
-                            <el-dropdown-item>关于作者</el-dropdown-item>
+
+                        <a href="https://github.com/ityong/vue-tpl-admin.git" target="_blank">
+                            <el-dropdown-item>项目仓库-github</el-dropdown-item>
                         </a>
-                        <a href="" target="_blank">
-                            <el-dropdown-item>项目仓库</el-dropdown-item>
+                        <a href="https://gitee.com/ityong/vue-tpl-admin.git" target="_blank">
+                            <el-dropdown-item>项目仓库-gitee</el-dropdown-item>
                         </a>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
@@ -68,7 +69,7 @@ export default {
             topMenuMap: topMenuMap,
             collapse: false,
             fullscreen: false,
-            name: 'linxin',
+            name: 'styleyong',
             message: 2
         };
     },
@@ -88,12 +89,10 @@ export default {
             }
         },
         //顶部菜单切换
-        topMenuChage(key) {
-            if (key !== this.topMenuKey) {
-                this.$root.$emit('topMenuChange',key)
-                this.topMenuKey = key
-            }
+        topMenuChange(key) {
 
+            this.$root.$emit('topMenuChange',key)
+            this.topMenuKey = key
         },
         // 侧边栏折叠
         collapseChage() {

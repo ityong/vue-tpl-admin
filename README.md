@@ -1,13 +1,15 @@
 # vue-tpl-admin
 
-基于 vue-cli3  Vue.js + Element UI 的后台管理系统解决方案。[线上地址](https://gitee.com/ityong/vue-tpl-admin.git)
+基于 vue-cli3  Vue.js + Element UI 的后台管理系统解决方案。
+> [源码仓库-github](https://github.com/ityong/vue-tpl-admin.git)   
+> [源码仓库-gitee](https://gitee.com/ityong/vue-tpl-admin.git)   
+> [在线演示](http://vadmintpl.ityong.cn)   
 
 ## 前言
 基于 vue.js，使用 vue-cli3 脚手架，引用 Element UI 组件库，方便开发快速简洁好看的组件。分离颜色样式，支持手动切换主题色，而且很方便使用自定义主题色。
 采用顶部菜单top + 侧边菜单组合进行菜单控制
 
 ## 功能
-
 -   [x] 登录/注销
 -   [x] Dashboard
 -   [x] 表格
@@ -29,9 +31,15 @@
 ## 安装步骤
 
 ```
-git clone https://gitee.com/ityong/vue-tpl-admin.git      // 把模板下载到本地
-cd vue-tpl-admin    // 进入模板目录
-npm install         // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
+// 把模板下载到本地
+git clone https://github.com/ityong/vue-tpl-admin.git
+or 
+git clone https://gitee.com/ityong/vue-tpl-admin.git
+// 进入模板目录
+cd vue-tpl-admin
+
+// 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
+npm install
 
 // 开启服务器，浏览器访问 http://localhost:8080
 npm run serve
