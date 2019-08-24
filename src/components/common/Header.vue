@@ -60,7 +60,7 @@
 </template>
 <script>
 
-import {topMenuMap} from  '../../data/menu'
+import {topMenuMap} from '../../conf/menu'
 
 export default {
     data() {

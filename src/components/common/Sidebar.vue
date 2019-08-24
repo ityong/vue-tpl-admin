@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    import {slider} from  '../../data/menu'
+    import {slider} from '../../conf/menu'
     export default {
         data() {
             return {

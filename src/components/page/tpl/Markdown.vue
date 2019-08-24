@@ -43,7 +43,7 @@
                     url: '/common/upload',
                     method: 'post',
                     data: formdata,
-                    headers: { 'Content-Type': 'multipart/form-data' },
+                    headers: { 'Content-Type': 'multipart/form-conf' },
                 }).then((url) => {
                     this.$refs.md.$img2Url(pos, url);
                 })
