@@ -93,7 +93,7 @@ export default new Router({
                 },
                 {
                     path: '/tpl/404',
-                    component: () => import('../components/page/tpl/404.vue'),
+                    component: () => import('../components/page//tpl/404.vue'),
                     meta: { title: '404' }
                 },
                 {
@@ -109,12 +109,18 @@ export default new Router({
             ]
         },
         {
-            path: '/tpl/login',
+            path: '/login',
             component: () => import('../components/page/tpl/Login.vue')
         },
         {
+            path: '/403',
+            component: () => import('../components/page/403.vue'),
+            meta: { title: '403' }
+        },
+        {
             path: '*',
-            redirect: '/tpl/404'
+            component: () => import('../components/page/404.vue'),
+            meta: { title: '404' }
         }
     ]
 });
