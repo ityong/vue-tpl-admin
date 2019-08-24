@@ -10,21 +10,21 @@ const topMenuMap = [
 const slider = {
     index: [
         {
-            icon: 'el-icon-lx-home',
+            icon: 'el-icon-loading',
             path: 'dashboard', //固定值其他页面有判断不能关闭此路由
             title: '管理中心面板'
         }
     ],
     user: [
         {
-            icon: 'el-icon-lx-cascades',
+            icon: 'el-icon-date',
             path: 'tpl/table',
             title: '基础表格'
         }
     ],
     sys: [
         {
-            icon: 'el-icon-lx-calendar',
+            icon: 'el-icon-s-order',
             path: '#',
             title: '分类管理',
             subs: [
@@ -45,17 +45,17 @@ const slider = {
     ],
     tool:[
         {
-            icon: 'el-icon-lx-cascades',
+            icon: 'el-icon-date',
             path: 'tpl/table',
             title: '基础表格'
         },
         {
-            icon: 'el-icon-lx-copy',
+            icon: 'el-icon-guide',
             path: 'tpl/tabs',
             title: 'tab选项卡'
         },
         {
-            icon: 'el-icon-lx-calendar',
+            icon: 'el-icon-film',
             path: '#',
             title: '表单相关',
             subs: [
@@ -84,12 +84,12 @@ const slider = {
             ]
         },
         {
-            icon: 'el-icon-lx-emoji',
+            icon: 'el-icon-s-promotion',
             path: 'tpl/icon',
             title: '自定义图标'
         },
         {
-            icon: 'el-icon-pie-chart',
+            icon: 'el-icon-finished',
             path: 'tpl/charts',
             title: 'schart图表'
         },
@@ -109,12 +109,12 @@ const slider = {
             ]
         },
         {
-            icon: 'el-icon-lx-global',
+            icon: 'el-icon-medal-1',
             path: 'tpl/i18n',
             title: '国际化功能'
         },
         {
-            icon: 'el-icon-lx-warn',
+            icon: 'el-icon-s-release',
             path: '#',
             title: '错误处理',
             subs: [
@@ -129,7 +129,7 @@ const slider = {
             ]
         },
         {
-            icon: 'el-icon-lx-redpacket_fill',
+            icon: 'el-icon-s-custom',
             path: 'tpl/donate',
             title: '支持作者'
         }
