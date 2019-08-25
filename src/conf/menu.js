@@ -65,11 +65,15 @@ const slider = {
                 },
                 {
                     path: '#',
-                    title: '三级菜单',
+                    title: '编辑器',
                     subs: [
                         {
                             path: 'tpl/editor',
                             title: '富文本编辑器'
+                        },
+                        {
+                            path: 'tpl/editor2',
+                            title: 'Tinymce5编辑器'
                         },
                         {
                             path: 'tpl/markdown',
@@ -86,12 +90,7 @@ const slider = {
         {
             icon: 'el-icon-s-promotion',
             path: 'tpl/icon',
-            title: '自定义图标'
-        },
-        {
-            icon: 'el-icon-finished',
-            path: 'tpl/charts',
-            title: 'schart图表'
+            title: 'icon图标'
         },
         {
             icon: 'el-icon-rank',

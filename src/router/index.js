@@ -26,7 +26,7 @@ export default new Router({
                 {
                     path: '/tpl/icon',
                     component: () => import('../components/page/tpl/Icon.vue'),
-                    meta: { title: '自定义图标' }
+                    meta: { title: 'icon图标' }
                 },
                 {
                     path: '/tpl/table',
@@ -46,13 +46,18 @@ export default new Router({
                 {
                     // 富文本编辑器组件
                     path: '/tpl/editor',
-                    component: () => import('../components/page/tpl/VueEditor.vue'),
+                    component: () => import('../components/page/tpl/editor/VueEditor.vue'),
                     meta: { title: '富文本编辑器' }
+                },
+                {
+                    path: '/tpl/editor2',
+                    component: () => import('../components/page/tpl/editor/Tinymce5.vue'),
+                    meta: { title: 'Tinymce5编辑器' }
                 },
                 {
                     // markdown组件
                     path: '/tpl/markdown',
-                    component: () => import('../components/page/tpl/Markdown.vue'),
+                    component: () => import('../components/page/tpl/editor/Markdown.vue'),
                     meta: { title: 'markdown编辑器' }
                 },
                 {
@@ -60,12 +65,6 @@ export default new Router({
                     path: '/tpl/upload',
                     component: () => import('../components/page/tpl/Upload.vue'),
                     meta: { title: '文件上传' }
-                },
-                {
-                    // vue-schart组件
-                    path: '/tpl/charts',
-                    component: () => import('../components/page/tpl/BaseCharts.vue'),
-                    meta: { title: 'schart图表' }
                 },
                 {
                     // 拖拽列表组件
