@@ -151,8 +151,9 @@ export default {
 }
 .header .logo {
     float: left;
-    width: 195px;
+    min-width: 140px;
     line-height: 70px;
+    margin-right: 10px;
 }
 .header .top-menu{
     float: left;
