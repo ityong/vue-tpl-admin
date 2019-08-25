@@ -17,9 +17,6 @@
 </template>
 
 <script>
-    import vHead from './Header.vue';
-    import vSidebar from './Sidebar.vue';
-    import vTags from './Tags.vue';
     export default {
         data(){
             return {
@@ -28,7 +25,9 @@
             }
         },
         components:{
-            vHead, vSidebar, vTags
+            vHead: () => import(/* webpackChunkName: 'HomeLayout' */'./Header.vue'),
+            vSidebar:() => import(/* webpackChunkName: 'HomeLayout' */'./Sidebar.vue'),
+            vTags:() => import(/* webpackChunkName: 'HomeLayout' */'./Tags.vue')
         },
         created(){
             this.$root.$on('collapse', msg => {
